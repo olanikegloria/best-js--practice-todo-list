@@ -1,4 +1,5 @@
 import updateList from './update.js';
+import updateLocalStorage from './dataStorage.js';
 
 export default class ListStore {
   constructor() {
@@ -13,10 +14,6 @@ export default class ListStore {
     this.lists = this.lists.filter((item) => item.id !== itemId);
   }
 }
-
-export const updateLocalStorage = (newListStore) => {
-  localStorage.setItem('lists', JSON.stringify(newListStore.lists));
-};
 
 const tasks = document.querySelector('.tasks');
 export const renderTasks = (listInstance) => {

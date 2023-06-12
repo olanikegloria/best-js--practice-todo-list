@@ -1,5 +1,6 @@
 import './style.css';
-import ListStore, { renderTasks, updateLocalStorage } from './modules/utility.js';
+import ListStore, { renderTasks } from './modules/utility.js';
+import updateLocalStorage from './modules/dataStorage.js';
 
 const newListStore = new ListStore();
 
